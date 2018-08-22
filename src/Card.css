@@ -1,0 +1,41 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 450px;
+    border: medium solid black ;
+    border-radius: 15px;
+    margin:10px;
+    background:#fff;
+
+}
+
+.suit {
+    height: 100px;
+    width: 100px;
+    margin:8px;
+}
+
+.right{
+    align-self: flex-end;
+    float:right;
+    text-align:right;
+}
+
+.left {
+    align-self: flex-start;
+    float:left;
+    text-align:left;
+}
+
+.val {
+    font-size: 30pt;
+    margin: 10px 32px 10px 32px;
+}
+.suit-large {
+    align-self: center;
+    height: 200px;
+    width: 200px;
+    position: center;
+    margin: 20px;
+}
