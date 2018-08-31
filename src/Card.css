@@ -1,19 +1,22 @@
 .card {
     display: flex;
     flex-direction: column;
-    height: 600px;
-    width: 450px;
-    border: medium solid black ;
+    height: 125px;
+    width: 80px;
+    border: thin solid black ;
     border-radius: 15px;
     margin:10px;
     background:#fff;
+}
 
+.hidden {
+    background-color: lightskyblue;
 }
 
 .suit {
-    height: 100px;
-    width: 100px;
-    margin:8px;
+    height: 10px;
+    width: 10px;
+    margin:5px 5px 5px 5px;
 }
 
 .right{
@@ -29,13 +32,13 @@
 }
 
 .val {
-    font-size: 30pt;
-    margin: 10px 32px 10px 32px;
+    font-size: 10pt;
+    margin: 0px 7px 0px 7px;
 }
 .suit-large {
     align-self: center;
-    height: 200px;
-    width: 200px;
+    height: 20px;
+    width: 20px;
     position: center;
-    margin: 20px;
+    margin:16px
 }

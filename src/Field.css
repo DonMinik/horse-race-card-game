@@ -1,0 +1,25 @@
+.field {
+    display:grid;
+    grid-template-colums: 100px 100px 100px 100px auto  ;
+    grid-template-rows: auto;
+    grid-template-areas: "finish1 finish2 finish3 finish4 finish "
+    "track41 track42 track43 track44 marker4"
+    "track31 track32 track33 track34 marker3"
+    "track21 track22 track23 track24 marker2"
+    "track11 track12 track13 track14 marker1"
+    "start1 start2 start3 start4 start"
+    "deck drawn stats stats stats";
+    border: medium solid black ;
+}
+
+.start, .start1, .start2, .start3, .start4 {
+    background-color: wheat;
+}
+
+.finish, .finish1, .finish2, .finish3, .finish4 {
+    background-color: lightgreen;
+}
+
+.marker1, .marker2, .marker3, .marker4 {
+    background-color: lightgray;
+}

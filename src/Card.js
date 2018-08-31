@@ -1,33 +1,30 @@
-import React , {Component} from 'react';
-import hearts from './416px-SuitHearts.svg';
-import diamonds from './480px-SuitDiamonds.svg';
-import clubs from './SuitClubs.svg';
-import spades from './SuitSpades.svg';
+import React, {Component} from 'react';
 import './Card.css';
 
 class Card extends Component {
 
-    constructor(args) {
-        super(args);
-        this.state = {value : 10, suit: SuitEnum.clubs}
+    constructor(props) {
+        super(props);
+        this.state = {value: props.value, suit: props.suit, hidden: props.hidden ? props.hidden : false}
     }
+
 
     render() {
-        return(
-            <div className="card" >
-                <img src={this.state.suit} alt="boo" className="suit left"/>
-                <br/>
-                <span className="val left">{this.state.value}</span>
-                <br/>
-                <img src={this.state.suit} alt="boo" className="suit-large"/>
-                <br/>
-                <span className="val right">{this.state.value}</span>
-                <img src={this.state.suit} alt="boo" className="suit right"/>
-            </div>
-        )
-    }
+        let card;
+        if (!this.state.hidden) {
+            card = <div className="card">
+                    <img src={this.state.suit} alt="boo" className="suit left"/>
+                    <span className="val left">{this.state.value}</span>
+                    <img src={this.state.suit} alt="boo" className="suit-large"/>
+                    <span className="val right">{this.state.value}</span>
+                    <img src={this.state.suit} alt="boo" className="suit right"/>
+                </div>;
+                }  else {
+                card = <div className="card hidden"/>
+                }
+            return (<div>{card}</div>);
+        }
 }
 
-export default Card;
 
-const SuitEnum = Object.freeze({"diamonds" : diamonds, "clubs": clubs, "hearts" : hearts, "spades" : spades});
+export default Card;
